@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Lyrics to Slides",
+  "version": "0.2.0",
+  "description": "Paste lyrics and build a PowerPoint file, one slide per section.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Lyrics to Slides"
+  },
+  "permissions": ["storage"]
+}

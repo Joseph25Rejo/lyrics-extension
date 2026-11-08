@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lyrics to Slides</title>
+  <style>
+    body { font-family: system-ui, sans-serif; width: 360px; margin: 0; padding: 14px; color: #1a1a1a; }
+    h1 { font-size: 16px; margin: 0 0 10px; }
+    label { font-size: 13px; color: #555; display: block; margin-top: 8px; }
+    input[type=text], textarea { width: 100%; box-sizing: border-box; padding: 7px; margin-top: 3px; border: 1px solid #ccc; border-radius: 6px; font-family: inherit; }
+    textarea { resize: vertical; }
+    button { margin-top: 10px; padding: 7px 12px; border: 0; border-radius: 6px; background: #ffff64; color: #000; font-weight: 600; cursor: pointer; }
+    button:disabled { opacity: .5; cursor: default; }
+    #status { font-size: 13px; color: #444; margin-top: 8px; min-height: 16px; }
+    #status.error { color: #b00020; }
+    .hint { font-size: 13px; color: #666; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Lyrics to Slides</h1>
+
+  <label>Song title (title slide)
+    <input type="text" id="title" placeholder="e.g. My Song">
+  </label>
+
+  <label>Lyrics
+    <textarea id="lyrics" rows="10" placeholder="Paste text here. Use [Tags] for section headers, e.g. [Verse 1]. Blank lines separate sections."></textarea>
+  </label>
+  <div class="hint">Only text you have rights to use.</div>
+
+  <button id="build">Build PPTX</button>
+  <div id="status"></div>
+
+  <script src="lib/pptxgen.bundle.js"></script>
+  <script src="src/layout.js"></script>
+  <script src="src/measure.js"></script>
+  <script src="src/fit.js"></script>
+  <script src="src/split.js"></script>
+  <script src="src/assemble.js"></script>
+  <script src="src/parse.js"></script>
+  <script src="src/render.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
